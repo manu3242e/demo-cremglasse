@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="it">
+<head><meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Cremglassé · Apri la tua cremeria italiana in franchising</title>
+<meta name="description" content="Franchising Cremglassé: la cremeria italiana con il gelato mantecato a vista. Due formule di affiliazione, nessuna fee e nessuna royalty.">
+<meta name="theme-color" content="#C41645">
+<link rel="icon" href="img/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/sito.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<script>if(location.search.includes('foto'))document.documentElement.classList.add('foto')</script>
+</head>
+<body>
+
+<!-- preloader: la coppetta si riempie, la linea taglia, lo schermo si apre in due -->
+<div id="pre" aria-hidden="true">
+  <div class="pre-meta mono"><span>Cremglassé</span><span>Buttigliera d'Asti · AT</span></div>
+  <div class="pre-centro">
+    <svg class="pre-cono" viewBox="0 0 100 140">
+      <defs><clipPath id="pallina"><circle cx="50" cy="42" r="30"/></clipPath></defs>
+      <circle cx="50" cy="42" r="30" class="vuota"/>
+      <rect id="preRiempi" x="18" y="72" width="64" height="0" clip-path="url(#pallina)"/>
+      <path d="M22 62 L50 134 L78 62 Z" class="cialda"/>
+      <path d="M30 72 L62 112 M42 66 L72 92 M58 66 L38 112 M70 72 L46 124" class="righe"/>
+    </svg>
+    <div class="pre-num"><span id="preN">000</span><small>%</small></div>
+  </div>
+  <div class="pre-meta mono"><span>Franchising · Gelateria e Gourmanderie</span><span id="preOra">ORE 09:00</span></div>
+  <div class="pre-linea"></div>
+</div>
+
+<canvas id="gl" aria-hidden="true"></canvas>
+<div class="grana" aria-hidden="true"></div>
+<p class="filigrana mono" aria-hidden="true">Demo · Marmo Studio</p>
+
+<div class="mirino" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<div class="hud mono" aria-hidden="true">
+  <span class="hud-ora"><i></i>ORE <b id="ora">09:00</b></span>
+  <span class="hud-sez"><span id="sez">Apertura</span><em></em></span>
+</div>
+
+<div id="cursore" aria-hidden="true"><span class="punto"></span><span class="anello"><b>Vedi</b></span></div>
+
+<header class="nav">
+  <a href="#top" class="logo" aria-label="Cremglassé, torna su"><img src="img/logo.webp" alt="Cremglassé · la cremeria italiana" width="640" height="196"></a>
+  <nav class="menu" aria-label="Sezioni">
+    <a href="#dentro">Il format</a><a href="#formule">Formule</a><a href="#vantaggi">Vantaggi</a><a href="#percorso">Come si apre</a><a href="#negozi">Negozi</a>
+  </nav>
+  <div class="nav-dx">
+    <a class="tel" href="tel:+390119427408"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg><span>011 9427408</span></a>
+    <button class="btn btn-brand btn-s" data-apri="">Richiedi info<svg viewBox="0 0 16 16"><path d="M1 8h13M9 3l5 5-5 5"/></svg></button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ APERTURA ============ -->
+<section class="hero" data-sez="Apertura">
+  <div class="hero-testo">
+    <p class="pill"><i></i>Franchising · Gelateria e Gourmanderie <span>Italia · Svizzera · Germania · Emirati</span></p>
+    <h1 class="titolo"><span class="riga"><span>La cremeria</span></span><span class="riga"><span class="box">italiana</span></span></h1>
+    <p class="sotto rivela">Il gelato prodotto e mantecato a vista, davanti a chi entra. <em>Due formule di affiliazione, nessuna fee e nessuna royalty.</em></p>
+    <div class="cta rivela">
+      <button class="btn btn-brand" data-apri=""><span class="lungo">Richiedi informazioni sul franchising</span><span class="corto">Richiedi info sul franchising</span><svg viewBox="0 0 16 16"><path d="M1 8h13M9 3l5 5-5 5"/></svg></button>
+      <a class="btn btn-bianco" href="#formule">Le formule</a>
+    </div>
+  </div>
+  <div class="hero-scheda mono rivela" aria-hidden="true">
+    <span>Cono · tre palline</span><span>Mantecato a vista</span>
+  </div>
+  <div class="scorri mono" aria-hidden="true"><span></span>Scorri</div>
+</section>
+
+<!-- ============ NUMERI (dalla loro pagina "Apri il tuo Cremglassé") ============ -->
+<section id="numeri" class="numeri" data-sez="Numeri">
+  <p class="etichetta mono"><i></i><span class="tc">ORE 10:30</span> · Perché affiliarsi</p>
+  <div class="num-griglia">
+    <div class="num rivela"><b data-conta="0">0</b><small>%</small><p>royalty. No fee di ingresso.</p></div>
+    <div class="num rivela"><b data-conta="50">0</b><small>%</small><p>di risparmio sulla manodopera rispetto al metodo tradizionale</p></div>
+    <div class="num rivela"><b data-conta="600">0</b><small>%</small><p>di ricarico sul prodotto</p></div>
+    <div class="num rivela"><b data-conta="12">0</b><small>mesi</small><p>per il raggiungimento del break even point</p></div>
+    <div class="num rivela"><span class="da">A partire da</span><b data-conta="200000">0</b><small>€</small><p>con possibilità di finanziare il progetto</p></div>
+  </div>
+  <p class="fonte mono">Numeri e diciture dalla pagina «Apri il tuo Cremglassé»</p>
+</section>
+
+<!-- ============ DENTRO UN CREMGLASSÉ (vetrina orizzontale) ============ -->
+<section id="dentro" class="vetrina" data-sez="Il format">
+  <div class="vetrina-pin">
+    <div class="vetrina-testa">
+      <p class="etichetta mono"><i></i><span class="tc">ORE 11:45</span> · Il format</p>
+      <h2 class="h2 rivela">Il gelato fatto <em>davanti a te.</em></h2>
+      <div class="filtri" role="tablist" aria-label="Filtra">
+        <button class="on" data-f="tutto">Tutto</button><button data-f="design">Il design dei negozi</button><button data-f="prodotti">I prodotti</button>
+      </div>
+      <p class="contatore mono"><b id="cIdx">01</b> / <span id="cTot">14</span></p>
+    </div>
+    <div class="binario-vista"><div class="binario" id="binario"></div></div>
+    <div class="barra"><span id="barra"></span></div>
+  </div>
+</section>
+
+<!-- ============ FORMULE (lista attiva) ============ -->
+<section id="formule" class="formule" data-sez="Formule">
+  <div class="for-sx">
+    <p class="etichetta mono"><i></i><span class="tc">ORE 13:00</span> · Formule di affiliazione</p>
+    <h2 class="h2 rivela">Due formule, <em>su misura</em> per il tuo spazio.</h2>
+    <p class="rivela">Dal banco take away al locale con saletta e dehor. I progettisti adattano il format a qualsiasi spazio e requisito.</p>
+    <div class="for-vista" aria-hidden="true"><img id="forImg" src="img/vetrina.webp" alt="" loading="lazy" width="760" height="1020"></div>
+  </div>
+  <div class="for-lista">
+    <div class="riga-for on" data-img="vetrina">
+      <span class="i mono">01</span><h3>Cremglassé <em>Small</em></h3><span class="t">Take away</span>
+      <ul><li>Banco gelateria con mantecatore a vista</li><li>Produzione gelati e semifreddi</li><li>Angolo frutteria, waffle, crêpes, centrifughe e yogurteria take away</li></ul>
+      <button class="btn btn-brand btn-s" data-apri="Small">Chiedi info sulla Small<svg viewBox="0 0 16 16"><path d="M1 8h13M9 3l5 5-5 5"/></svg></button>
+    </div>
+    <div class="riga-for" data-img="poltrone">
+      <span class="i mono">02</span><h3>Cremglassé <em>Large</em></h3><span class="t">Format completo</span>
+      <ul><li>Banco gelateria con mantecatore a vista</li><li>Produzione gelati e semifreddi</li><li>Angolo frutteria, waffle, crêpes, centrifughe e yogurteria</li><li>Banco caffetteria e banco bakery</li><li>Cocktail e aperitivi</li><li>Saletta interna e dehor esterno con servizio al tavolo</li></ul>
+      <button class="btn btn-brand btn-s" data-apri="Large">Chiedi info sulla Large<svg viewBox="0 0 16 16"><path d="M1 8h13M9 3l5 5-5 5"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VANTAGGI (scura, griglia a righe) ============ -->
+<section id="vantaggi" class="vantaggi scura" data-sez="Vantaggi">
+  <p class="etichetta mono chiara"><i></i><span class="tc">ORE 14:30</span> · I vantaggi</p>
+  <h2 class="h2 rivela">I vantaggi di aprire <em>Cremglassé.</em></h2>
+  <div class="van-griglia">
+    <div class="van"><b>01</b><span>No fee, no royalty</span></div>
+    <div class="van"><b>02</b><span>Riduzione dei tempi di lavorazione e di preparazione</span></div>
+    <div class="van"><b>03</b><span>50% di risparmio sulla manodopera</span></div>
+    <div class="van"><b>04</b><span>Investiamo sul tuo staff con formazione e assistenza</span></div>
+    <div class="van"><b>05</b><span>Possibilità di finanziare il progetto</span></div>
+    <div class="van"><b>06</b><span>Esclusività di zona</span></div>
+    <div class="van"><b>07</b><span>Analisi di mercato, se hai individuato la zona</span></div>
+    <div class="van"><b>08</b><span>Se non hai la location, la troviamo noi</span></div>
+  </div>
+  <div class="autorita rivela">
+    <b>30<small>+ anni</small></b>
+    <p>Gli arredi li progetta e li produce la capogruppo, <strong>Arredi &amp; Design Food S.r.l.</strong> di Torino, con una trentennale esperienza nella falegnameria per bar, gelaterie e ristoranti. <a href="https://arredi-design.com" target="_blank" rel="noopener">arredi-design.com</a></p>
+  </div>
+</section>
+
+<!-- ============ COME SI APRE (passi) ============ -->
+<section id="percorso" class="percorso" data-sez="Come si apre">
+  <p class="etichetta mono"><i></i><span class="tc">ORE 16:00</span> · Come si apre</p>
+  <h2 class="h2 rivela">Dalla prima telefonata <em>al banco aperto.</em></h2>
+  <ol class="passi">
+    <li class="rivela"><span class="pallino">1</span><h3>Richiesta</h3><p>Lasci nome, città e se hai già un locale. Ti richiamiamo noi.</p><span class="segnaposto mono">Tempi · da compilare</span></li>
+    <li class="rivela"><span class="pallino">2</span><h3>Zona e location</h3><p>Analisi di mercato sulla tua zona, con esclusiva. Se non hai la location, la troviamo noi.</p><span class="segnaposto mono">Tempi · da compilare</span></li>
+    <li class="rivela"><span class="pallino">3</span><h3>Progetto e arredi</h3><p>Scegli la formula. I progettisti adattano il locale al tuo spazio; gli arredi li produce Arredi &amp; Design Food.</p><span class="segnaposto mono">Tempi · da compilare</span></li>
+    <li class="rivela"><span class="pallino">4</span><h3>Formazione e apertura</h3><p>Formazione e assistenza per il tuo staff, poi il banco apre con il gelato mantecato a vista.</p><span class="segnaposto mono">Tempi · da compilare</span></li>
+  </ol>
+</section>
+
+<!-- ============ NEGOZI ============ -->
+<section id="negozi" class="negozi" data-sez="Negozi">
+  <div class="neg-testa">
+    <p class="etichetta mono"><i></i><span class="tc">ORE 17:00</span> · I nostri negozi</p>
+    <div class="neg-num rivela"><b data-conta="24">0</b><p>negozi Cremglassé, in Italia e all'estero, <em>e 5 prossime aperture.</em></p></div>
+  </div>
+  <div class="nastro" aria-label="Negozi Cremglassé"><div class="nastro-in" id="nastro"></div></div>
+  <p class="prossime mono">Prossime aperture · Parigi · Roma Formello · Aversa · Brindisi · Vibo Valentia</p>
+</section>
+
+<!-- ============ RICHIESTA (scura) ============ -->
+<section id="richiesta" class="richiesta scura" data-sez="Richiesta">
+  <div class="ric-sx">
+    <p class="etichetta mono chiara"><i></i><span class="tc">ORE 18:00</span> · Richiedi informazioni</p>
+    <h2 class="titolo-fine rivela">Il prossimo apre <span class="box">nella tua città</span></h2>
+    <div class="contatti rivela">
+      <div><p class="mono">Telefono</p><p><a href="tel:+390119427408">+39 011 9427408</a><br><a href="tel:+393343302266">+39 334 3302266</a></p></div>
+      <div><p class="mono">Email</p><p><a href="mailto:info@cremglasse.com">info@cremglasse.com</a></p></div>
+      <div><p class="mono">Sede</p><p>Via Riva 25, 14021<br>Buttigliera d'Asti (AT)<br><small>Orari 09:00 · 18:00</small></p></div>
+    </div>
+  </div>
+  <div class="ric-modulo" id="moduloFinale"></div>
+</section>
+</main>
+
+<footer class="piede">
+  <img src="img/logo-chiaro.webp" alt="Cremglassé" width="640" height="196" loading="lazy">
+  <p>© Cremglassé · P.IVA 11552000017</p>
+  <p class="nota mono">Anteprima dimostrativa preparata da Marmo Studio · non pubblicata</p>
+</footer>
+
+<!-- richiesta sempre in vista -->
+<button class="flottante btn btn-brand" data-apri="">Richiedi informazioni<svg viewBox="0 0 16 16"><path d="M1 8h13M9 3l5 5-5 5"/></svg></button>
+<div class="barra-tel">
+  <a class="btn btn-bianco" href="tel:+390119427408">Chiama</a>
+  <button class="btn btn-brand" data-apri="">Richiedi info sul franchising</button>
+</div>
+<div class="velo" id="velo"></div>
+<aside class="cassetto" id="cassetto" aria-hidden="true" aria-label="Richiedi informazioni">
+  <button class="chiudi" id="chiudi" aria-label="Chiudi">×</button>
+  <div id="moduloCassetto"></div>
+</aside>
+
+<template id="tplModulo">
+  <form class="modulo" novalidate>
+    <h3>Apri il tuo <em>Cremglassé</em></h3>
+    <p class="mod-sotto">Ti richiamiamo per parlarne. Nessun impegno.</p>
+    <label class="campo"><input name="nome" placeholder=" " required autocomplete="name"><span>Nome e cognome</span></label>
+    <label class="campo"><input name="tel" type="tel" placeholder=" " required autocomplete="tel"><span>Telefono</span></label>
+    <label class="campo"><input name="citta" placeholder=" " required><span>Città in cui vorresti aprire</span></label>
+    <fieldset><legend>Hai già un locale?</legend>
+      <div class="scelte"><label><input type="radio" name="locale" value="si"><span>Sì</span></label><label><input type="radio" name="locale" value="no"><span>No, cercatelo voi</span></label><label><input type="radio" name="locale" value="forse"><span>Ci sto pensando</span></label></div></fieldset>
+    <fieldset><legend>Quando vorresti aprire?</legend>
+      <div class="scelte"><label><input type="radio" name="tempi" value="presto"><span>Il prima possibile</span></label><label><input type="radio" name="tempi" value="anno"><span>Entro un anno</span></label><label><input type="radio" name="tempi" value="valuto"><span>Sto valutando</span></label></div></fieldset>
+    <fieldset class="formula"><legend>Formula</legend>
+      <div class="scelte"><label><input type="radio" name="formula" value="Small"><span>Small</span></label><label><input type="radio" name="formula" value="Large"><span>Large</span></label><label><input type="radio" name="formula" value="Non so"><span>Non lo so ancora</span></label></div></fieldset>
+    <label class="privacy"><input type="checkbox" required><span>Ho letto l'informativa privacy</span></label>
+    <button class="btn btn-brand invia" type="submit">Richiedi informazioni sul franchising<svg viewBox="0 0 16 16"><path d="M1 8h13M9 3l5 5-5 5"/></svg></button>
+    <p class="sicuro">I tuoi dati restano a Cremglassé.</p>
+    <div class="grazie"><b>✓</b><h4>Richiesta pronta.</h4><p>Questa è un'anteprima: il modulo non invia dati. Sul sito vero la richiesta arriva a info@cremglasse.com.</p></div>
+  </form>
+</template>
+
+<script src="js/pagina.js"></script>
+</body>
+</html>
